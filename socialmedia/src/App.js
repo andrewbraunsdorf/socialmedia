@@ -2,11 +2,26 @@ import React, { Component } from 'react';
 
 
 class App extends Component {
-    state={
+  state = {
     artistname: null,
     songname: null,
     lyrics: null
   }
+
+  setArtist = name => {
+    this.setState({
+      artistname: name
+    });
+  }
+  setSong = name => {
+    this.setState({
+      songname: name
+    });
+  }
+  setLyrics = lyrics => {
+    this.setState({ lyrics });
+  }
+
   render() {
     return (
       <div className="App">
