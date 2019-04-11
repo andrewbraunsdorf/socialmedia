@@ -58,3 +58,5 @@ render(){
       );
     }
 }
+
+export default Input;

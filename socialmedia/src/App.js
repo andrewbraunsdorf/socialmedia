@@ -28,7 +28,17 @@ class App extends Component {
       <div className="App">
         
         <h2>Search for a song </h2>
-          
+          <Input 
+          setArtistName = {this.setArtist}
+          setSongName = {this.setSong}
+          setLyricsText = {this.setLyrics}
+        />
+        
+        <Display 
+          artist={this.state.artistname} 
+          song= {this.state.songname}
+          lyrics={this.state.lyrics} 
+        />
           
       </div>
     );
