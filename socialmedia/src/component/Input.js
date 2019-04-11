@@ -28,6 +28,25 @@ class Input extends Component{
       "songname",
       this.state.songname
     );
+    const url = 
+    "https://api.lyrics.ovh/v1" 
+    + "/"
+    + this.state.artistname
+    + "/"
+    + this.state.songname
+    console.log(url)
+    
+    axios(url)
+    .then(response=>{
+      console.log(response.data);
+      this.setState({
+        lyrics: response.data.lyrics
+      })
+      this.props.setLyricsText(response.data.lyrics);
+    })
+    
+    this.props.setArtistName(this.state.artistname);
+    this.props.setSongName(this.state.songname);
   }
 render(){
       return(
