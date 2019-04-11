@@ -25,7 +25,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App"
+      style={{
+          "textAlign":"center", 
+          "margin": "auto",
+          "width":"90%"
+        }}>
         
         <h2>Search for a song </h2>
           <Input 
