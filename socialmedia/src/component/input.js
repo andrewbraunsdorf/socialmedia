@@ -9,6 +9,26 @@ class Input extends Component{
     lyrics: null
   }
   
+    setArtist = e => {
+    this.setState({
+      artistname: e.target.value
+    });
+  }
+  
+  setSong = e => {
+    this.setState({
+      songname: e.target.value
+    });
+  }
+  
+  handleClick = () => {
+    console.log(
+      "artisname",
+      this.state.artistname,
+      "songname",
+      this.state.songname
+    );
+  }
 render(){
       return(
         <div>
