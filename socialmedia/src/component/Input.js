@@ -51,7 +51,9 @@ class Input extends Component{
 render(){
       return(
         <div>
-        
+          <input onChange={this.setArtist} placeholder="Artist Name"/>
+          <input onChange={this.setSong} placeholder="Song Name" />
+          <button onClick={this.handleClick} >Search </button>
         </div>
       );
     }
